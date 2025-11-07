@@ -1,0 +1,677 @@
+.card-container {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto; /* Horizontal scroll */
+    padding: 10px;
+} 
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Top zomato nav */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Small gap between logo and search bar */
+}
+
+.logo {
+    width: 120px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 600px; /* Wider container */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background: #fff;
+}
+
+.location {
+    width: 150px; /* Location section wider */
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    width: 350px; /* Narrower search input */
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-icon {
+    color: #999;
+    position: absolute;
+    right: 15px;
+}
+
+.auth-links {
+    position: relative;
+    right: 0;
+}
+
+.auth-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+
+/* ---------- Category menu layout ---------- */
+.category-menu {
+  position: relative;
+  display: flex;
+  gap: 48px;
+  padding: 14px 24px 30px; /* room for indicator underneath */
+  align-items: center;     /* important: center vertically (icon + text) */
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* category becomes a horizontal, inline item (icon left, text right) */
+.category {
+  display: inline-flex;
+  flex-direction: row;     /* icon + text side-by-side */
+  align-items: center;     /* vertical center of icon and text */
+  gap: 12px;               /* space between icon and label */
+  position: relative;
+  color: #555;
+  text-decoration: none;   /* avoid underlines from links */
+  transition: color .18s ease;
+}
+
+/* icon (circular background) */
+.category img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f4f4f4;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+  display: block;
+}
+
+/* label text to the right of icon */
+.category span {
+  font-size: 16px;
+  color: #555;
+  display: inline-block;
+  line-height: 1;          /* prevents extra height */
+  white-space: nowrap;
+}
+
+/* hover behaviour */
+.category:hover img {
+  transform: scale(1.04);
+  background: #f3f3f3;
+}
+
+/* ---------- Active (selected) visuals ---------- */
+/* active icon: tinted circle, subtle lift + shadow */
+.category.active img {
+  background: #e6f2f2;                 /* tinted circle */
+  transform: translateY(-6px) scale(1.03); /* lift icon visually */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* active label: red color */
+.category.active span {
+  color: #e23744;
+  font-weight: 600;
+}
+
+/* keep anchors from turning purple (visited) */
+.category, .category:link, .category:visited { color: inherit; }
+
+/* ---------- Indicator tweaks (so bar lines up nicely) ---------- */
+.menu-indicator::after {
+  bottom: 8px;    /* slight lift so bar appears just below labels (tweakable) */
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .category img { width: 50px; height: 50px; padding: 8px; }
+  .category-menu { gap: 32px; padding-left: 18px; padding-right: 18px; }
+}
+@media (max-width: 520px) {
+  .category img { width: 44px; height: 44px; padding: 6px; }
+  .category-menu { gap: 18px; padding-left: 12px; padding-right: 12px; }
+  .category span { font-size: 14px; }
+}
+/* Underline bar for active category */
+.menu-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.menu-indicator::after {
+  content: "";
+  position: absolute;
+  bottom: 10px; /* ↓ decreased distance between underline & icons/text */
+  height: 3px;
+  background: #e23744;
+  border-radius: 2px;
+  width: var(--width, 100px);
+  left: var(--left, 0px);
+  transition: left 0.25s ease, width 0.25s ease;
+}
+
+.category.active img {
+  background: #e6f2f2;
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+
+/* Add */
+.add {
+    display: block;
+    max-width: 100%;      /* Prevent overflow */
+    width: auto;         /* Set a reasonable size */
+    height: auto;         /* Maintain aspect ratio */
+    margin: 20px auto;    /* Center horizontally */
+}
+
+.catelog {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.catelog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.catelog-header h1 {
+  font-size: 28px;
+  color: #222;
+  margin: 0;
+}
+
+.view-all {
+  font-size: 15px;
+  color: #e03546;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#Collections_text {
+  font-size: 15px;
+  color: #555;
+  margin: 5px 25px 20px;
+}
+
+/* Card container */
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 25px;
+  padding: 10px 50px;
+  scrollbar-width: none;
+}
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card */
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: #fff;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-content p {
+  font-size: 14px;
+  margin: 4px 0 0;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+  color: #333;
+  z-index: 10;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.scroll-btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-50%) scale(1.1);
+}
+.scroll-btn.left {
+  left: 15px;
+}
+.scroll-btn.right {
+  right: 15px;
+}
+
+/* filter button */
+ .button
+{
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration:color-mix(in hsl shorter hue, color percentage, color percentage);
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 8px;
+} 
+#container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* restaurant-card */
+
+.restaurant-card {
+    width: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #fff;
+    margin: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.offer-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #007bff;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.card-details {
+    padding: 12px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Left and right alignment */
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.row h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.rating {
+    background: #4CAF50;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.timing {
+    color: red;
+    font-weight: bold;
+}
+
+.distance {
+    color: #777;
+}
+
+body, button, input, input::placeholder {
+    font-family: Okra, Helvetica, sans-serif;
+}
+
+
+/* Resturent card  */
+/* ---- GRID WRAPPER ---- */
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+  padding: 20px;
+}
+
+/* ---- CARD ---- */
+.restaurant-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+.restaurant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- IMAGE CONTAINER ---- */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.restaurant-card:hover .image-container img {
+  transform: scale(1.04);
+}
+
+/* ---- PROMOTED BADGE ---- */
+.promoted-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+/* ---- OFFER BADGE ---- */
+.offer-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: linear-gradient(90deg, #0062ff, #007bff);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+.offer-badge i {
+  font-size: 12px;
+}
+
+/* ---- CARD DETAILS ---- */
+.card-details {
+  padding: 14px 16px 18px;
+}
+
+/* Common row layout */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+  flex-wrap: nowrap;
+}
+
+/* ---- RESTAURANT NAME ---- */
+.card-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- RATING ---- */
+.rating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background-color: #1a932e;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.rating i {
+  font-size: 11px;
+  color: #fff;
+}
+
+/* ---- CUISINE & PRICE ---- */
+.cuisine {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.price {
+  font-size: 14px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* ---- LOCATION ---- */
+.location {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #777;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---- TIMING + DISTANCE ---- */
+.timing {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+.distance {
+  font-size: 13px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 992px) {
+  .restaurant-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .image-container {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+  .restaurant-card {
+    border-radius: 12px;
+  }
+}
+
+
+
+/* Delivery css  */
+
+/* categroy scroller */
+
+.scroll-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.scroll-wrapper h2 {
+  font-size: 24px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 25px;
+  padding: 10px 40px;
+  scrollbar-width: none;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-item {
+  flex: 0 0 auto;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.scroll-item:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+.scroll-item:hover img {
+  transform: scale(1.08);
+}
+.scroll-item p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: #333;
+  z-index: 10;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.scroll-btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-50%) scale(1.1);
+}
+.scroll-btn.left {
+  left: 10px;
+}
+.scroll-btn.right {
+  right: 10px;
+}
+
+

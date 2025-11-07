@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food Online from Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/72191cffa7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="container">
+
+            
+    <div class="top-nav">
+        <!-- Left section: Logo + Search -->
+        <div class="left-section">
+            <img class="logo" src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" >
+            <div class="search-bar">
+                <span class="location">
+                    <i class="fa-solid fa-location-dot"></i> Hyderabad
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
+                <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </div>
+
+        <!-- Right section: Login / Signup -->
+        <div class="auth-links">
+            <a href="">Log in</a>
+            <a href="">Sign up</a>
+        </div>
+    </div>
+
+            
+    <p>Home / India / Hyderabad Restaurants</p>
+
+   <div class="category-menu" id="categoryMenu">
+  <!-- Dining Out -->
+  <a href="zomato.html" class="category"
+     data-default="	https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png"
+     data-active="https://b.zmtcdn.com/data/o2_assets/30fa0a844f3ba82073e5f78c65c18b371616149662.png">
+    <img src="https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png" alt="Dining Out">
+    <span>Dining Out</span>
+  </a>
+
+  <!-- Delivery - ACTIVE -->
+  <a href="delivery.html" class="category active"
+     data-default="https://b.zmtcdn.com/data/o2_assets/246bbd71fbba420d5996452be3024d351616150055.png"
+     data-active="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png">
+    <img src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png" alt="Delivery">
+    <span>Delivery</span>
+  </a>
+
+  <!-- Nightlife -->
+  <a href="nightlife.html" class="category"
+     data-default="https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png"
+     data-active="https://b.zmtcdn.com/data/o2_assets/855687dc64a5e06d737dae45b7f6a13b1616149818.png">
+    <img src="https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png" alt="Nightlife">
+    <span>Nightlife</span>
+  </a>
+
+  <div class="menu-indicator"></div>
+</div>
+
+<div class="filterButton">
+                <button type="button" class="button"><i class="fa-solid fa-filter"></i> Filters </button>
+                
+
+                <button type="button" class="button">Pure Veg</button>
+
+                <button type="button" class="button">Cuisines</button>
+</div>
+
+<div class="scroll-wrapper">
+  <h2>Inspiration for your first order</h2>
+
+  <button class="scroll-btn left">&#10094;</button>
+
+  <div class="scroll-container" id="scrollContainer">
+    <div class="scroll-item">
+      <img src="https://b.zmtcdn.com/data/o2_assets/bf2d0e73add1c206aeeb9fec762438111727708719.png">
+      <p>Biryani</p>
+    </div>
+    <div class="scroll-item">
+      <img src="https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png">
+      <p>Pizza</p>
+    </div>
+    <div class="scroll-item">
+      <img src="https://b.zmtcdn.com/data/dish_images/197987b7ebcd1ee08f8c25ea4e77e20f1634731334.png">
+      <p>Chicken</p>
+    </div>
+    <div class="scroll-item">
+      <img src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png">
+      <p>Burger</p>
+    </div>
+    <div class="scroll-item">
+      <img src="https://b.zmtcdn.com/data/dish_images/91c554bcbbab049353a8808fc970e3b31615960315.png">
+      <p>Noodles</p>
+    </div>
+    <div class="scroll-item">
+      <img src="https://b.zmtcdn.com/data/o2_assets/2f34540e0b12058f5f8b9390c3a3fb4a1648972281.png">
+      <p>Shawarma</p>
+    </div>
+    <div class="scroll-item">
+      <img src="https://b.zmtcdn.com/data/o2_assets/019409fe8f838312214d9211be010ef31678798444.jpeg">
+      <p>North Indian</p>
+    </div>
+    <div class="scroll-item">
+      <img src="https://b.zmtcdn.com/data/dish_images/d5ab931c8c239271de45e1c159af94311634805744.png">
+      <p>Cake</p>
+    </div>
+    <div class="scroll-item">
+      <img src="https://b.zmtcdn.com/data/o2_assets/fc641efbb73b10484257f295ef0b9b981634401116.png">
+      <p>Sandwich</p>
+    </div>
+    <div class="scroll-item">
+      <img src="https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png">
+      <p>Rolls</p>
+    </div>
+  </div>
+
+  <button class="scroll-btn right">&#10095;</button>
+</div>
+
+
+<div class="scroll-wrapper">
+  <h2>Top brands for you</h2>
+
+  <button class="scroll-btn left">&#10094;</button>
+
+  <div class="scroll-container" id="scrollContainer1">
+    <div class="scroll-item">
+      <img src="	https://b.zmtcdn.com/data/brand_creatives/logos/cbab06420cf860d4b2be81c8f8adb7141754493003.png" alt="Pista House">
+      <p>Pista House</p>
+    </div>
+
+    <div class="scroll-item">
+      <img src="	https://b.zmtcdn.com/data/brand_creatives/logos/f0751237a0f648cf23571ee0909add421726051487.png" alt="Pista House Bakery">
+      <p>Pista House Bakery</p>
+    </div>
+
+    <div class="scroll-item">
+      <img src="	https://b.zmtcdn.com/data/brand_creatives/logos/1a985408ca7ad8fd097f2c47db9c5cb6_1611252531.png" alt="Domino's Pizza">
+      <p>Domino's Pizza</p>
+    </div>
+
+    <div class="scroll-item">
+      <img src="	https://b.zmtcdn.com/data/brand_creatives/logos/f1dc700c8be881b9a17be904971a0644_1726681832.png" alt="KFC">
+      <p>KFC</p>
+    </div>
+
+    <div class="scroll-item">
+      <img src="	https://b.zmtcdn.com/data/brand_creatives/logos/8c0e702a0831f5a8b108cd7edbc48d67_1728976747.png" alt="Cream Stone Ice Cream">
+      <p>Cream Stone Ice Cream</p>
+    </div>
+
+    <div class="scroll-item">
+      <img src="	https://b.zmtcdn.com/data/brand_creatives/logos/a6927d83d9185b7788814049b4a9fc8c_1726607812.png" alt="Burger King">
+      <p>Burger King</p>
+    </div>
+
+    <div class="scroll-item">
+        <img src="https://b.zmtcdn.com/data/brand_creatives/logos/8e611fa769c66049e2af45b00b1d8d52_1635882594.png" alt="">
+      <p>Shah Ghouse Hotel & Restaurant</p>
+    </div>
+
+    <div class="scroll-item">
+          <img src="	https://b.zmtcdn.com/data/brand_creatives/logos/c3a1181e43e3d90589ac31246f908abd_1629439693.png" alt="">
+      <p>Cafe Niloufer</p>
+    </div>
+
+    <div class="scroll-item">
+          <img src="https://b.zmtcdn.com/data/brand_creatives/logos/116fd4c89f628d110a526c2fdea08b16_1726681936.png" alt="">
+      <p>Paradise Biryani - A Legend Since 1953</p>
+    </div>
+
+    <div class="scroll-item">
+    <img src="	https://b.zmtcdn.com/data/brand_creatives/logos/5c1c97764d187c1e4dc1dbdea54c7318_1726684167.png" alt="">
+      <p>McDonald's</p>
+    </div>
+  </div>
+
+  
+  <button class="scroll-btn right">&#10095;</button>
+</div>
+
+        <h1>Food Delivery Restaurants in Hyderabad</h1>
+   <div class="restaurant-grid"> 
+
+  <!-- 1: Chotu's The Food People -->
+  <a href="https://www.zomato.com/hyderabad/chotus-the-food-people-ghansi-bazaar/order" target="_blank" class="restaurant-card-link">
+    <div class="restaurant-card">
+      <div class="image-container">
+        <img src="https://b.zmtcdn.com/data/pictures/9/93739/106f2a8b0adbd7191311ac8c7fa794df_o2_featured_v2.jpg" alt="Chotu's The Food People">
+        <span class="offer-badge">50% OFF</span>
+      </div>
+      <div class="card-details">
+        <div class="row">
+          <h3>Chotu's The Food People</h3>
+          <span class="rating">3.8 <i class="fa-solid fa-star"></i></span>
+        </div>
+        <div class="row">
+          <p>North Indian, Chinese, Biryani</p>
+          <span class="price">₹200 for one</span>
+        </div>
+        <div class="row">
+          <p class="timing"></p>
+          <span class="distance">32 min</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2: Grand Hotel - Since 1935 -->
+  <a href="https://www.zomato.com/hyderabad/grand-hotel-since-1935-abids/order" target="_blank" class="restaurant-card-link">
+    <div class="restaurant-card">
+      <div class="image-container">
+        <img src="https://b.zmtcdn.com/data/pictures/0/92020/2a10a9511ade13ba169c30cd3103370f_o2_featured_v2.jpg" alt="Grand Hotel - Since 1935">
+        <span class="offer-badge">50% OFF</span>
+      </div>
+      <div class="card-details">
+        <div class="row">
+          <h3>Grand Hotel - Since 1935</h3>
+          <span class="rating">4.3 <i class="fa-solid fa-star"></i></span>
+        </div>
+        <div class="row">
+          <p>Biryani, North Indian, Chinese</p>
+          <span class="price">₹400 for one</span>
+        </div>
+        <div class="row">
+          <p class="timing"></p>
+          <span class="distance">38 min</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 3: MS Mandi & Shawarma -->
+  <a href="https://www.zomato.com/hyderabad/ms-mandi-shawarma-charminar/order" target="_blank" class="restaurant-card-link">
+    <div class="restaurant-card">
+      <div class="image-container">
+        <img src="https://b.zmtcdn.com/data/pictures/1/19497661/e9fd8752fc895da929bd85abe47b775d_o2_featured_v2.jpg" alt="MS Mandi & Shawarma">
+        <span class="offer-badge">50% OFF</span>
+      </div>
+      <div class="card-details">
+        <div class="row">
+          <h3>MS Mandi & Shawarma</h3>
+          <span class="rating">4.1 <i class="fa-solid fa-star"></i></span>
+        </div>
+        <div class="row">
+          <p>North Indian, Mandi, Fast Food</p>
+          <span class="price">₹400 for one</span>
+        </div>
+        <div class="row">
+          <p class="timing"></p>
+          <span class="distance">27 min</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 4: Imperial Multi Cuisine Restaurant -->
+  <a href="https://www.zomato.com/hyderabad/imperial-multi-cuisine-restaurant-1-malakpet/order" target="_blank" class="restaurant-card-link">
+    <div class="restaurant-card">
+      <div class="image-container">
+        <img src="https://b.zmtcdn.com/data/pictures/4/19647774/2a323591192ab16df8084b372bdcb438_o2_featured_v2.jpg" alt="Imperial Multi Cuisine Restaurant">
+        <span class="offer-badge">50% OFF</span>
+      </div>
+      <div class="card-details">
+        <div class="row">
+          <h3>Imperial Multi Cuisine Restaurant</h3>
+          <span class="rating">4.2 <i class="fa-solid fa-star"></i></span>
+        </div>
+        <div class="row">
+          <p>Chinese, Kebab, Biryani</p>
+          <span class="price">₹400 for one</span>
+        </div>
+        <div class="row">
+          <p class="timing"></p>
+          <span class="distance">30 min</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 5: Hotel Nayaab - Since 1986 -->
+  <a href="https://www.zomato.com/hyderabad/hotel-nayaab-since-1986-charminar/order" target="_blank" class="restaurant-card-link">
+    <div class="restaurant-card">
+      <div class="image-container">
+        <img src="https://b.zmtcdn.com/data/pictures/6/92136/9353567af7744b6201fef94337241954_o2_featured_v2.jpg" alt="Hotel Nayaab - Since 1986">
+        <span class="offer-badge">Flat 10% OFF</span>
+      </div>
+      <div class="card-details">
+        <div class="row">
+          <h3>Hotel Nayaab - Since 1986</h3>
+          <span class="rating">4.1 <i class="fa-solid fa-star"></i></span>
+        </div>
+        <div class="row">
+          <p>Biryani, North Indian, Mughlai</p>
+          <span class="price">₹350 for one</span>
+        </div>
+        <div class="row">
+          <p class="timing"></p>
+          <span class="distance">32 min</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 6: Al Akbar Fast Food Corner -->
+  <a href="https://www.zomato.com/hyderabad/al-akbar-fast-food-corner-2-charminar/order" target="_blank" class="restaurant-card-link">
+    <div class="restaurant-card">
+      <div class="image-container">
+        <img src="https://b.zmtcdn.com/data/pictures/5/19891595/502c4604e007c7decaba3d52d46dbf2e_o2_featured_v2.jpg" alt="Al Akbar Fast Food Corner">
+        <span class="offer-badge">50% OFF</span>
+      </div>
+      <div class="card-details">
+        <div class="row">
+          <h3>Al Akbar Fast Food Corner</h3>
+          <span class="rating">3.9 <i class="fa-solid fa-star"></i></span>
+        </div>
+        <div class="row">
+          <p>Chinese, Beverages</p>
+          <span class="price">₹100 for one</span>
+        </div>
+        <div class="row">
+          <p class="timing"></p>
+          <span class="distance">29 min</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+
+    </div>
+    
+    </header>
+    <script src="deljs.js"></script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+.card-container {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto; /* Horizontal scroll */
+    padding: 10px;
+} 
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Top zomato nav */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Small gap between logo and search bar */
+}
+
+.logo {
+    width: 120px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 600px; /* Wider container */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background: #fff;
+}
+
+.location {
+    width: 150px; /* Location section wider */
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    width: 350px; /* Narrower search input */
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-icon {
+    color: #999;
+    position: absolute;
+    right: 15px;
+}
+
+.auth-links {
+    position: relative;
+    right: 0;
+}
+
+.auth-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+
+/* Categore button */
+
+.category-menu {
+    display: flex;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.category {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    gap: 10px; /* Space between icon and text */
+    cursor: pointer;
+    color: #555;
+    font-size: 16px;
+}
+
+.category img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    padding: 10px;
+}
+
+.category.active img {
+    background: #e6f2f2; /* Light highlight */
+}
+
+.category.active span {
+    color: #e23744; /* Red text for active */
+    font-weight: normal; /* Remove bold */
+}
+
+
+/* catelog card catogrey and add*/
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0; /* Prevent shrinking */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.add {
+    display: block;
+    max-width: 100%;      /* Prevent overflow */
+    width: auto;         /* Set a reasonable size */
+    height: auto;         /* Maintain aspect ratio */
+    margin: 20px auto;    /* Center horizontally */
+}
+
+.card img {
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.top-nav img {
+    width: 110px;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    color: #fff;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.card-content p {
+    font-size: 14px;
+    margin: 4px 0 0;
+}
+
+
+/* Reset link appearance */
+.category, .category:link, .category:visited, .category:hover, .category:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Menu wrapper */
+.category-menu {
+  position: relative;
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
+
+/* Category button */
+.category {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #555;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+/* Icon styling */
+.category img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #f8f8f8;
+  padding: 12px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.category:hover img {
+  transform: scale(1.05);
+  background: #f3f3f3;
+}
+
+/* Active state */
+.category.active span {
+  color: #e23744;
+  font-weight: 600;
+}
+.category.active img {
+  background: #e6f2f2;
+  transform: scale(1.05);
+}
+
+/* Text */
+.category span {
+  font-size: 18px;
+}
+
+/* Underline indicator */
+.menu-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.menu-indicator::after {
+  content: "";
+  position: absolute;
+  bottom: 10px; /* distance below icon/text */
+  height: 3px;
+  background: #e23744;
+  border-radius: 2px;
+  width: var(--width, 100px);
+  left: var(--left, 0px);
+  transition: left 0.25s ease, width 0.25s ease;
+}
+
+#container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+        
+
+body, button, input, input::placeholder {
+    font-family: Okra, Helvetica, sans-serif;
+}
+
+/* categroy scroller */
+
+.scroll-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.scroll-wrapper h2 {
+  font-size: 24px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 25px;
+  padding: 10px 40px;
+  scrollbar-width: none;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-item {
+  flex: 0 0 auto;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.scroll-item:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+.scroll-item:hover img {
+  transform: scale(1.08);
+}
+.scroll-item p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: #333;
+  z-index: 10;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.scroll-btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-50%) scale(1.1);
+}
+.scroll-btn.left {
+  left: 10px;
+}
+.scroll-btn.right {
+  right: 10px;
+}
+
+
+
+
+/* restudent card */
+
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.restaurant-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* Image Section */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offer-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Card Details */
+.card-details {
+  padding: 12px 14px 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.card-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.card-details p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rating {
+  background-color: #1a932e;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.price, .distance {
+  font-size: 14px;
+  color: #555;
+}
+
+.fa-star {
+  font-size: 11px;
+  color: #fff;
+}
